@@ -19,6 +19,13 @@ export class AppComponent {
   Nuevo(){
     this.router.navigate(["add"]);
   }
+  ListarArea(){
+    this.router.navigate(["listar_ar"])
+   }
+
+  NuevaArea(){
+    this.router.navigate(["add_ar"])
+  }
 }
 
 

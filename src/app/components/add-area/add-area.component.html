@@ -1,0 +1,32 @@
+<div class="container col-md-6">
+  <div class="card cabeza">
+    <div class="card-header cabeza">
+      <h3>Crear Areas</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Nombre:</label>
+          <input [(ngModel)]="area.nameArea" name="nombre"  type="text" class="form-control" placeholder="nombre area"required="">
+        </div>
+        <div class="form-group">
+          <label for="">codigo area:</label>
+          <input [(ngModel)]="area.codeArea" name="codigo"  type="number" class="form-control" placeholder="codigo area"required="">
+        </div>
+        <div class="form-group">
+          <label for="">estado area:</label>
+          <input  name="area"  type="number" class="form-control" placeholder="##" required=""
+            [(ngModel)]="area.stateArea">
+
+
+
+
+        </div>
+
+        <button class="btn btn-danger" (click)="GuardarA(area)"  [disabled]=>Guardar</button>
+
+      </form>
+
+    </div>
+  </div>
+</div>

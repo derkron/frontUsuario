@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Usuarios } from '../Modelo/Usuarios';
+import { Areas } from '../Modelo/Areas';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import { Usuarios } from '../Modelo/Usuarios';
 export class ServiceService {
 
   constructor(private http:HttpClient) { }
+  url='http://localhost:8080/areas'
 
   Url='http://localhost:8080/usuarios';
 
@@ -27,5 +29,23 @@ export class ServiceService {
   }
   deleteUsusario(usuario:Usuarios){
     return this.http.delete<Usuarios>(this.Url+"/"+usuario.id);
+  }
+
+  getArea(){
+    return this.http.get<Areas[]>(this.url);
+  }
+  createArea(area:Areas){
+    return this.http.post<Areas>(this.url,area);
+  }
+  getAreaId(id:number){
+    return this.http.get<Areas>(this.url+"/"+id);
+  }
+
+  updateArea(area:Areas){
+    return this.http.put<Areas>(this.url+"/"+area.id,area);
+
+  }
+  deleteArea(area:Areas){
+    return this.http.delete<Areas>(this.url+"/"+area.id);
   }
 }

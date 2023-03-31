@@ -8,17 +8,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddComponent } from './components/add/add.component';
 import { EditarComponent } from './components/editar/editar.component';
-import { EliminarComponent } from './components/eliminar/eliminar.component';
 import { ListarComponent } from './components/listar/listar.component';
 import { ServiceService } from './Service/service.service';
+import { AddAreaComponent } from './components/add-area/add-area.component';
+import { EditarAreaComponent } from './components/editar-area/editar-area.component';
+import { ListarAreaComponent } from './components/listar-area/listar-area.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddComponent,
     EditarComponent,
-    EliminarComponent,
-    ListarComponent
+    ListarComponent,
+    AddAreaComponent,
+    EditarAreaComponent,
+    ListarAreaComponent
   ],
   imports: [
     BrowserModule,
